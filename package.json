@@ -1,0 +1,22 @@
+{
+  "name": "dascally-portfolio",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dascally/dascally.github.io.git"
+  },
+  "author": "Daniel Scally",
+  "bugs": {
+    "url": "https://github.com/dascally/dascally.github.io/issues"
+  },
+  "homepage": "https://github.com/dascally/dascally.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
