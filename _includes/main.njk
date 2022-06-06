@@ -1,0 +1,39 @@
+---
+title: Fallback title
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
+    <script
+      src="https://kit.fontawesome.com/33b33f7630.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="globalNav">
+        <ul class="globalNav__list">
+          <li><a href="{{ 'about.html' | url }}">About</a></li>
+          <li><a href="{{ 'work.html' | url }}">Work</a></li>
+          <li><a href="{{ 'contact.html' | url }}">Contact</a></li>
+        </ul>
+        <ul class="globalNav__iconList">
+          <li>
+            <a href=""><span class="fa-brands fa-github fa-lg"></span></a>
+          </li>
+          <li>
+            <a href=""><span class="fa-brands fa-linkedin fa-lg"></span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
