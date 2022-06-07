@@ -19,10 +19,11 @@ title: Fallback title
       src="https://kit.fontawesome.com/33b33f7630.js"
       crossorigin="anonymous"
     ></script>
+    <script src="{{ '/scripts/index.js' | url }}" type="module"></script>
   </head>
   <body>
     <header>
-      <nav class="globalNav">
+      <nav class="globalNav collapse" id="globalNav">
         <ul class="globalNav__list">
           <li>
             <a href="{{ 'about.html' | url }}" class="globalNav__link">About</a>
@@ -45,6 +46,13 @@ title: Fallback title
           </li>
         </ul>
       </nav>
+      <button
+        type="button"
+        class="hamburger js-toggle-collapse"
+        data-target="#globalNav"
+      >
+        <span class="fa-solid fa-bars fa-lg"></span>
+      </button>
     </header>
     <main>
       {{ content | safe }}
