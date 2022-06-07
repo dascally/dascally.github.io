@@ -50,6 +50,10 @@ a {
 a:hover {
   color: var(--primary-dark);
 }
+a:active {
+  color: var(--primary-darker);
+}
+
 
 .globalNav,
 .globalNav__list {
