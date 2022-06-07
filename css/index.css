@@ -20,6 +20,7 @@
 body {
   display: grid;
   margin: 0;
+  min-height: 100vh;
   grid: auto 1fr / none;
   column-gap: 1rem;
 
