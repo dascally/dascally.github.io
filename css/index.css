@@ -1,33 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --dark: hsl(240, 17%, 17%);
+  --dark-dark: hsl(240, 17%, 12%);
   --light: hsl(30, 100%, 97%);
   --primary: hsl(270, 40%, 67%);
-  --primary-dark: hsl(270, 40%, 60%);
+  --primary-dark: hsl(270, 40%, 64%);
+  --primary-darker: hsl(270, 40%, 60%);
+  --primary-darkest: hsl(270, 25%, 50%);
   --secondary: hsl(120, 12%, 60%);
   /* --warning: hsl(12, 92%, 60%); */
+
+  --font-family-sans-serif: -apple-system, 'Segoe UI', 'Roboto', 'Noto Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 body {
   display: grid;
   grid: auto 1fr / none;
   column-gap: 1rem;
-  margin: 1rem;
+  margin: 0;
   background: var(--dark);
   font-size: 14pt;
+  font-family: var(--font-family-sans-serif);
   color: var(--light);
-}
-
-a {
-  color: var(--primary);
-}
-a:active {
-  color: var(--primary-dark);
 }
 
 @media screen and (min-width: 992px) {
   body {
     grid: none / auto 1fr;
   }
+}
+
+body > header {
+  padding: 1rem;
+  background: var(--dark-dark);
+  font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
+}
+
+body > main {
+  padding: 1rem;
+}
+
+a {
+  color: var(--primary);
+}
+a:hover {
+  color: var(--primary-dark);
+}
+a:active {
+  color: var(--primary-darker);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-start: 0;
 }
 
 .globalNav,
@@ -39,7 +73,7 @@ a:active {
 .globalNav {
   align-items: center;
   justify-content: space-between;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
 }
 
 .globalNav__list,
@@ -73,4 +107,20 @@ a:active {
   .globalNav__list {
     flex-direction: column;
   }
+
+  .globalNav {
+    padding: 1rem;
+  }
+}
+
+.globalNav__link {
+  display: block;
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+
+.globalNav__link:hover {
+  background: var(--primary-darkest);
+  color: var(--light);
 }
