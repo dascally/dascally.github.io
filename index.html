@@ -16,10 +16,11 @@
       src="https://kit.fontawesome.com/33b33f7630.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/scripts/index.js" type="module"></script>
   </head>
   <body>
     <header>
-      <nav class="globalNav">
+      <nav class="globalNav collapse" id="globalNav">
         <ul class="globalNav__list">
           <li>
             <a href="about.html" class="globalNav__link">About</a>
@@ -42,6 +43,13 @@
           </li>
         </ul>
       </nav>
+      <button
+        type="button"
+        class="hamburger js-toggle-collapse"
+        data-target="#globalNav"
+      >
+        <span class="fa-solid fa-bars fa-lg"></span>
+      </button>
     </header>
     <main>
       <h2>Welcome to GitHub Pages</h2>
