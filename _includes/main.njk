@@ -26,15 +26,20 @@ title: Fallback title
       <nav class="globalNav collapse" id="globalNav">
         <ul class="globalNav__list">
           <li>
+            <a href="{{ '/' | url }}" class="globalNav__link"
+              >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
+            >
+          </li>
+          <li>
             <a href="{{ 'about' | url }}" class="globalNav__link">About Me</a>
           </li>
           <li>
-            <a href="{{ 'work' | url }}" class="globalNav__link">Work</a>
+            <a href="{{ 'portfolio' | url }}" class="globalNav__link"
+              >Portfolio</a
+            >
           </li>
           <li>
-            <a href="{{ 'contact' | url }}" class="globalNav__link"
-              >Contact</a
-            >
+            <a href="{{ 'contact' | url }}" class="globalNav__link">Contact</a>
           </li>
         </ul>
         <ul class="globalNav__iconList">
