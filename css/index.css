@@ -7,6 +7,9 @@
   --primary-darkest: hsl(270, 25%, 50%);
   --secondary: hsl(120, 12%, 60%);
   /* --warning: hsl(12, 92%, 60%); */
+
+  --font-family-sans-serif: -apple-system, 'Segoe UI', 'Roboto', 'Noto Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -16,6 +19,7 @@ body {
   margin: 1rem;
   background: var(--dark);
   font-size: 14pt;
+  font-family: var(--font-family-sans-serif);
   color: var(--light);
 }
 
@@ -23,6 +27,10 @@ body {
   body {
     grid: none / auto 1fr;
   }
+}
+
+body > header {
+  font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
 }
 
 a {
