@@ -91,7 +91,7 @@ a:active {
 
 .globalNav__iconList > li {
   display: inline-block;
-  margin-inline: 0.25rem;
+  margin-inline: 0.5rem;
   width: 1.875rem;
 }
 
