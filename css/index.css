@@ -1,9 +1,27 @@
+:root {
+  --dark: hsl(240, 17%, 17%);
+  --light: hsl(30, 100%, 97%);
+  --primary: hsl(270, 40%, 67%);
+  --primary-dark: hsl(270, 40%, 60%);
+  --secondary: hsl(120, 12%, 60%);
+  /* --warning: hsl(12, 92%, 60%); */
+}
+
 body {
   display: grid;
   grid: auto 1fr / none;
   column-gap: 1rem;
   margin: 1rem;
+  background: var(--dark);
   font-size: 14pt;
+  color: var(--light);
+}
+
+a {
+  color: var(--primary);
+}
+a:active {
+  color: var(--primary-dark);
 }
 
 @media screen and (min-width: 992px) {
