@@ -17,17 +17,17 @@ body {
   color: var(--light);
 }
 
+@media screen and (min-width: 992px) {
+  body {
+    grid: none / auto 1fr;
+  }
+}
+
 a {
   color: var(--primary);
 }
 a:active {
   color: var(--primary-dark);
-}
-
-@media screen and (min-width: 992px) {
-  body {
-    grid: none / auto 1fr;
-  }
 }
 
 .globalNav,
