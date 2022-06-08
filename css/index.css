@@ -22,7 +22,6 @@ body {
   margin: 0;
   min-height: 100vh;
   grid: auto 1fr / none;
-  column-gap: 1rem;
 
   background: var(--dark);
   color: var(--light);
@@ -87,7 +86,7 @@ a:active {
 }
 
 .globalNav {
-  row-gap: 1.25rem;
+  gap: 1.25rem 1.75rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -98,6 +97,7 @@ a:active {
   padding: 0;
   list-style: none;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .globalNav__list {
@@ -110,7 +110,7 @@ a:active {
   width: 1.875rem;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .globalNav,
   .globalNav__list {
     flex-direction: row;
@@ -154,7 +154,7 @@ a:active {
 .hamburger:active {
   color: var(--primary-darker);
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .hamburger {
     display: none;
   }
@@ -170,7 +170,7 @@ a:active {
   max-height: 200vh;
   margin-block-end: 1.5rem;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .collapse {
     max-height: revert;
     margin-block-end: revert;
