@@ -15,14 +15,12 @@
 
   --font-family-sans-serif: -apple-system, 'Segoe UI', 'Roboto', 'Noto Sans',
     'Helvetica Neue', sans-serif;
-
-  height: 100%;
 }
 
 body {
   display: grid;
   margin: 0;
-  min-height: 100%;
+  min-height: 100vh;
   grid: auto 1fr / none;
 
   background: var(--dark);
