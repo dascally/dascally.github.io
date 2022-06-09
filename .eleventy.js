@@ -1,8 +1,12 @@
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('scripts');
+  eleventyConfig.addPassthroughCopy('src/css');
+  eleventyConfig.addPassthroughCopy('src/scripts');
 
   return {
+    dir: {
+      input: 'src',
+      layouts: '_layouts',
+    },
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
   };

@@ -1,5 +1,5 @@
 ---
-layout: layouts/main.html
+layout: main.html
 title: 'Danny Scally: About Me'
 ---
 
