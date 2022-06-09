@@ -1,6 +1,6 @@
 ---
 layout: main.njk
-title: About Me
+title: 'Danny Scally: About Me'
 ---
 
 # About Me
