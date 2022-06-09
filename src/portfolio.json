@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "title": "Coffee & Comestibles",
+      "description": "The fictional bakery café website."
+    },
+    {
+      "title": "Another Project",
+      "description": "This one's just a placeholder to make sure things work...."
+    }
+  ]
+}
