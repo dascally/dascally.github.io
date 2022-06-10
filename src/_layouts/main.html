@@ -19,7 +19,7 @@ title: Danny Scally
       src="https://kit.fontawesome.com/33b33f7630.js"
       crossorigin="anonymous"
     ></script>
-    <script src="{{ '/scripts/index.js' | url }}" type="module"></script>
+    <script src="{{ '/js/index.js' | url }}" type="module"></script>
   </head>
   <body>
     <header>
@@ -59,8 +59,6 @@ title: Danny Scally
         <span class="fa-solid fa-bars fa-lg"></span>
       </button>
     </header>
-    <main>
-      {{ content | safe -}}
-    </main>
+    <main>{{ content | safe -}}</main>
   </body>
 </html>
