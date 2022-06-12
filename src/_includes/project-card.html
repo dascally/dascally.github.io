@@ -1,0 +1,19 @@
+<section class="projectCard">
+  <!-- <div class="projectCard__imgBox"> -->
+  <picture class="projectCard__imgContainer">
+    <source type="image/webp" srcset="{{ project.img.srcWebp }}" />
+    <img
+      class="projectCard__img"
+      src="{{ project.img.srcJpeg }}"
+      alt="{{ project.img.alt }}"
+    />
+  </picture>
+  <!-- </div> -->
+  <div class="projectCard__body">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+    <p class="projectCard__linkContainer">
+      <a href="{{ project.url }}">Visit {{ project.title}}</a>
+    </p>
+  </div>
+</section>

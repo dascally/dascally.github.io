@@ -2,11 +2,23 @@
   "projects": [
     {
       "title": "Coffee & Comestibles",
-      "description": "The fictional bakery café website."
+      "description": "The fictional bakery café website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde obcaecati impedit voluptatem aut dolores veritatis error ea? Veniam distinctio esse itaque ut? Excepturi hic rem dolorem officia dignissimos. Fugiat.",
+      "img": {
+        "srcWebp": "/img/coffee-and-comestibles-screenshot.webp",
+        "srcJpeg": "/img/coffee-and-comestibles-screenshot.jpg",
+        "alt": "Screenshot of the Coffee & Comestibles home page."
+      },
+      "url": "https://rad-meringue-5e53ba.netlify.app/"
     },
     {
       "title": "Another Project",
-      "description": "This one's just a placeholder to make sure things work...."
+      "description": "This one's just a placeholder to make sure things work.... Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde obcaecati impedit voluptatem aut dolores veritatis error ea? Veniam distinctio esse itaque ut? Excepturi hic rem dolorem officia dignissimos. Fugiat.",
+      "img": {
+        "srcWebp": "",
+        "srcJpeg": "",
+        "alt": ""
+      },
+      "url": ""
     }
   ]
 }
