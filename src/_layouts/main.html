@@ -19,7 +19,6 @@ title: Danny Scally
       src="https://kit.fontawesome.com/33b33f7630.js"
       crossorigin="anonymous"
     ></script>
-    <script src="{{ '/js/index.js' | url }}" type="module"></script>
   </head>
   <body>
     <header>
@@ -60,5 +59,12 @@ title: Danny Scally
       </button>
     </header>
     <main>{{ content | safe -}}</main>
+
+    <!-- prettier-ignore -->
+    {% set js %}
+      {% include 'js/toggle-collapse.js' %}
+    {% endset %}
+    <!-- prettier-ignore -->
+    <script>{{ js | jsmin | safe }}</script>
   </body>
 </html>
