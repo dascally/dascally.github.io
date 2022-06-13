@@ -1,6 +1,6 @@
 .projectCard {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
 
   display: flex;
   flex-flow: column nowrap;
@@ -37,9 +37,9 @@
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .projectCard {
-    max-width: 720px;
+    max-width: calc(0.95 * 750px);
     flex-direction: row;
   }
   .projectCard__imgContainer {
@@ -51,6 +51,6 @@
 }
 @media screen and (min-width: 1400px) {
   .projectCard {
-    max-width: 960px;
+    max-width: calc(0.95 * 1000px);
   }
 }

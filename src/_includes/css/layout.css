@@ -8,7 +8,7 @@ body {
   color: var(--light);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
   body {
     grid: none / auto 1fr;
   }
@@ -19,6 +19,12 @@ body > header {
   text-align: center;
   background: var(--dark-dark);
   font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
+}
+
+@media screen and (min-width: 1400px) {
+  body > header {
+    padding: 2rem 1rem;
+  }
 }
 
 body > main {
@@ -53,27 +59,8 @@ body > main {
 
 .globalNav__iconList > li {
   display: inline-block;
-  margin-inline: 0.5rem;
+  margin: 0rem 0.5rem;
   width: 1.875rem;
-}
-
-@media screen and (min-width: 768px) {
-  .globalNav,
-  .globalNav__list {
-    flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .globalNav,
-  .globalNav__list {
-    flex-direction: column;
-  }
-
-  .globalNav {
-    padding: 1rem;
-    row-gap: 1.75rem;
-  }
 }
 
 .globalNav__link {
@@ -85,6 +72,40 @@ body > main {
 .globalNav__link:hover {
   background: var(--primary-darkest);
   color: var(--light);
+}
+
+@media screen and (min-width: 750px) {
+  .globalNav,
+  .globalNav__list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .globalNav,
+  .globalNav__list {
+    flex-direction: column;
+  }
+
+  .globalNav {
+    padding: 1rem;
+    row-gap: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .globalNav__list,
+  .globalNav__iconList {
+    font-size: 1.5rem;
+  }
+
+  .globalNav__list {
+    row-gap: 1rem;
+  }
+
+  .globalNav__iconList > li {
+    margin: 0rem 0.75rem;
+  }
 }
 
 .globalNavHamburger {
@@ -112,7 +133,7 @@ body > main {
   margin-block-end: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .globalNavHamburger {
     display: none;
   }
