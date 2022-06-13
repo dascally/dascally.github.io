@@ -90,23 +90,18 @@ body > main {
   color: var(--light);
 }
 
-.hamburger {
+.globalNavHamburger {
   border: none;
   background: transparent;
   color: var(--primary);
   cursor: pointer;
   font-size: 1.5rem;
 }
-.hamburger:hover {
+.globalNavHamburger:hover {
   color: var(--primary-dark);
 }
-.hamburger:active {
+.globalNavHamburger:active {
   color: var(--primary-darker);
-}
-@media screen and (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
 }
 
 .collapse {
@@ -119,7 +114,12 @@ body > main {
   max-height: 200vh;
   margin-block-end: 1.5rem;
 }
+
 @media screen and (min-width: 768px) {
+  .globalNavHamburger {
+    display: none;
+  }
+
   .collapse {
     max-height: revert;
     margin-block-end: revert;
