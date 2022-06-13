@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --dark: hsl(240, 17%, 17%);
   --dark-dark: hsl(240, 17%, 12%);
@@ -16,7 +12,42 @@
   --font-family-sans-serif: -apple-system, 'Segoe UI', 'Roboto', 'Noto Sans',
     'Helvetica Neue', sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-start: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
+  font-weight: 300;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+a:active {
+  color: var(--primary-darker);
+}
 body {
   display: grid;
   margin: 0;
@@ -47,51 +78,6 @@ body > main {
   position: relative;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-block-start: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-align: center;
-  font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
-  font-weight: 300;
-}
-
-a {
-  color: var(--primary);
-}
-a:hover {
-  color: var(--primary-dark);
-}
-a:active {
-  color: var(--primary-darker);
-}
-
-.welcomeMessage {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.welcomeMessage__text {
-  text-align: center;
-  font: 300 2.5rem 'Montserrat Alternates', var(--font-family-sans-serif);
-}
 
 .globalNav,
 .globalNav__list {
@@ -149,29 +135,24 @@ a:active {
   padding: 0.25em 0.5em;
   text-decoration: none;
 }
-
 .globalNav__link:hover {
   background: var(--primary-darkest);
   color: var(--light);
 }
 
-.hamburger {
+
+.globalNavHamburger {
   border: none;
   background: transparent;
   color: var(--primary);
   cursor: pointer;
   font-size: 1.5rem;
 }
-.hamburger:hover {
+.globalNavHamburger:hover {
   color: var(--primary-dark);
 }
-.hamburger:active {
+.globalNavHamburger:active {
   color: var(--primary-darker);
-}
-@media screen and (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
 }
 
 .collapse {
@@ -184,20 +165,37 @@ a:active {
   max-height: 200vh;
   margin-block-end: 1.5rem;
 }
+
 @media screen and (min-width: 768px) {
+  .globalNavHamburger {
+    display: none;
+  }
+
   .collapse {
     max-height: revert;
     margin-block-end: revert;
   }
 }
-
+.welcomeMessage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcomeMessage__text {
+  text-align: center;
+  font: 300 2.5rem 'Montserrat Alternates', var(--font-family-sans-serif);
+}
 .portfolio {
   display: flex;
   flex-flow: column nowrap;
   gap: 1.75rem;
   align-items: center;
 }
-
 .projectCard {
   width: 100%;
   max-width: 420px;
