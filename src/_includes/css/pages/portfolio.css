@@ -1,6 +1,6 @@
 .portfolio {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.75rem;
+  gap: 1.5rem;
   align-items: center;
 }
