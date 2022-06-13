@@ -10,6 +10,12 @@ body {
   font-size: 14pt;
 }
 
+@media screen and (min-width: 992px) {
+  body {
+    grid: none / auto 1fr;
+  }
+}
+
 body > header {
   padding: 1rem;
   text-align: center;
@@ -22,11 +28,6 @@ body > main {
   position: relative;
 }
 
-@media screen and (min-width: 992px) {
-  body {
-    grid: none / auto 1fr;
-  }
-}
 
 .globalNav,
 .globalNav__list {
@@ -84,11 +85,11 @@ body > main {
   padding: 0.25em 0.5em;
   text-decoration: none;
 }
-
 .globalNav__link:hover {
   background: var(--primary-darkest);
   color: var(--light);
 }
+
 
 .globalNavHamburger {
   border: none;
