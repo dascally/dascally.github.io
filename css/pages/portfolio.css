@@ -1,0 +1,14 @@
+.portfolio {
+  margin-block-start: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 1400px) {
+  .portfolio {
+    margin-block-start: 1.75rem;
+    gap: 1.75rem;
+  }
+}
