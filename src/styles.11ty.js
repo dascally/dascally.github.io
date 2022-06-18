@@ -14,8 +14,8 @@ module.exports = class {
     };
   }
 
-  async render({ cssPath, rawCSS }) {
-    return await postcss([require('postcss-import'), require('cssnano')])
+  render({ cssPath, rawCSS }) {
+    return postcss([require('postcss-import'), require('cssnano')])
       .process(rawCSS, { from: cssPath, to: cssPath })
       .then((result) => result.css);
   }
