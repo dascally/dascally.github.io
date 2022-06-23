@@ -8,12 +8,6 @@ body {
   color: var(--light);
 }
 
-@media screen and (min-width: 1000px) {
-  body {
-    grid: none / auto 1fr;
-  }
-}
-
 body > header {
   padding: 1rem;
   text-align: center;
@@ -21,15 +15,21 @@ body > header {
   font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
 }
 
+body > main {
+  margin: calc(4rem / 3) 2rem;
+  position: relative;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    grid: none / auto 1fr;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   body > header {
     padding: 2rem 1rem;
   }
-}
-
-body > main {
-  margin: calc(4rem / 3) 1.5rem;
-  position: relative;
 }
 
 .globalNav,
