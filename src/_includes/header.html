@@ -1,0 +1,42 @@
+<header>
+  <nav class="globalNav collapse" id="globalNav">
+    <ul class="globalNav__list">
+      <li>
+        <a href="{{ '/' | url }}" class="globalNav__link"
+          >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
+        >
+      </li>
+      <li>
+        <a href="{{ '/about' | url }}" class="globalNav__link">About Me</a>
+      </li>
+      <li>
+        <a href="{{ '/portfolio' | url }}" class="globalNav__link">Portfolio</a>
+      </li>
+      <li>
+        <a href="{{ '/contact' | url }}" class="globalNav__link">Contact</a>
+      </li>
+    </ul>
+    <ul class="globalNav__iconList">
+      <li>
+        <a href=""><span class="fa-brands fa-github fa-lg"></span></a>
+      </li>
+      <li>
+        <a href=""><span class="fa-brands fa-linkedin fa-lg"></span></a>
+      </li>
+    </ul>
+  </nav>
+  <button
+    type="button"
+    class="globalNavHamburger js-toggle-collapse"
+    data-target="#globalNav"
+  >
+    <span class="fa-solid fa-bars fa-lg"></span>
+  </button>
+</header>
+
+<!-- prettier-ignore -->
+{% set js %}
+  {% include 'js/toggle-collapse.js' %}
+{% endset %}
+<!-- prettier-ignore -->
+<script>{{ js | jsmin | safe }}</script>
