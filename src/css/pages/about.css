@@ -1,0 +1,11 @@
+.skillsList {
+  text-align: center;
+}
+
+.skillsList li:first-child {
+  display: inline;
+}
+
+.skillsList li:nth-child(n + 2) {
+  display: inline list-item;
+}
