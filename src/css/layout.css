@@ -143,3 +143,20 @@ body > main {
     margin-block-end: revert;
   }
 }
+
+.container {
+  margin: 0 auto;
+  max-width: initial;
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    max-width: calc(5 / 6 * 100%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 900px;
+  }
+}
