@@ -43,3 +43,12 @@ a:hover {
 a:active {
   color: var(--primary-darker);
 }
+
+details {
+  margin-block-end: 1em;
+}
+
+summary {
+  display: inline list-item;
+  cursor: pointer;
+}
