@@ -46,4 +46,9 @@ summary {
   margin-block-end: 1em;
   width: max-content;
   cursor: pointer;
+  transition: margin 0.25s ease-in;
+}
+details[open] > summary {
+  margin-inline-start: 1em;
+  transition: margin 0.25s ease-out;
 }
