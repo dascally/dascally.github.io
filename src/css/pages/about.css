@@ -1,11 +1,17 @@
 .skillsList {
+  padding: 0;
   text-align: center;
 }
 
-.skillsList li:first-child {
+.skillsList > li {
   display: inline;
 }
 
-.skillsList li:nth-child(n + 2) {
-  display: inline list-item;
+.skillsList > li:nth-last-child(n + 2)::after {
+  content: '\20\2022\20';
+}
+
+.skillsList__skillText {
+  white-space: nowrap;
+}
 }
