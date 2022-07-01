@@ -39,7 +39,7 @@ body > main {
 
 @media screen and (min-width: 750px) {
   body > main {
-    margin: calc(4rem / 3) calc(1 / 6 * 100%);
+    margin: calc(4rem / 3) calc(1 / 8 * 100%);
   }
 }
 @media screen and (min-width: 1400px) {
