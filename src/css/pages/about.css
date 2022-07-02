@@ -14,4 +14,39 @@
 .skillsList__skillText {
   white-space: nowrap;
 }
+
+.eduList {
+  padding: 0;
+  list-style: none;
+}
+
+.eduList > li {
+  margin-block-end: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  column-gap: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .eduList > li {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+
+.eduList__description > p {
+  margin: 0;
+
+  /* Create a hanging indent */
+  padding-inline-start: 1em;
+  text-indent: -1em;
+}
+
+.eduList__description > p:first-child {
+  font-weight: 600;
+}
+
+.eduList__date {
+  margin-inline-start: auto;
+  white-space: nowrap;
 }
