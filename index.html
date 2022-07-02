@@ -17,44 +17,47 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <header>
-      <nav class="globalNav collapse" id="globalNav">
-        <ul class="globalNav__list">
-          <li>
-            <a href="/" class="globalNav__link"
-              >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
-            >
-          </li>
-          <li>
-            <a href="/about" class="globalNav__link">About Me</a>
-          </li>
-          <li>
-            <a href="/portfolio" class="globalNav__link"
-              >Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="/contact" class="globalNav__link">Contact</a>
-          </li>
-        </ul>
-        <ul class="globalNav__iconList">
-          <li>
-            <a href=""><span class="fa-brands fa-github fa-lg"></span></a>
-          </li>
-          <li>
-            <a href=""><span class="fa-brands fa-linkedin fa-lg"></span></a>
-          </li>
-        </ul>
-      </nav>
-      <button
-        type="button"
-        class="globalNavHamburger js-toggle-collapse"
-        data-target="#globalNav"
-      >
-        <span class="fa-solid fa-bars fa-lg"></span>
-      </button>
-    </header>
+  <body><header>
+  <nav class="globalNav collapse" id="globalNav">
+    <ul class="globalNav__list">
+      <li>
+        <a href="/" class="globalNav__link"
+          >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
+        >
+      </li>
+      <li>
+        <a href="/about" class="globalNav__link">About Me</a>
+      </li>
+      <li>
+        <a href="/portfolio" class="globalNav__link">Portfolio</a>
+      </li>
+      <li>
+        <a href="/contact" class="globalNav__link">Contact</a>
+      </li>
+    </ul>
+    <ul class="globalNav__iconList">
+      <li>
+        <a href=""><span class="fa-brands fa-github fa-lg"></span></a>
+      </li>
+      <li>
+        <a href=""><span class="fa-brands fa-linkedin fa-lg"></span></a>
+      </li>
+    </ul>
+  </nav>
+  <button
+    type="button"
+    class="globalNavHamburger js-toggle-collapse"
+    data-target="#globalNav"
+  >
+    <span class="fa-solid fa-bars fa-lg"></span>
+  </button>
+</header>
+
+<!-- prettier-ignore -->
+
+<!-- prettier-ignore -->
+<script>const toggleCollapseElts=document.querySelectorAll(".js-toggle-collapse");toggleCollapseElts.forEach((e=>{e.addEventListener("click",(l=>{document.querySelector(e.dataset.target).classList.toggle("show")}))}));</script>
+
     <main>
 <div class="welcomeMessage">
   <p class="welcomeMessage__text">
@@ -62,10 +65,5 @@
   </p>
 </div>
 </main>
-
-    <!-- prettier-ignore -->
-    
-    <!-- prettier-ignore -->
-    <script>const toggleCollapseElts=document.querySelectorAll(".js-toggle-collapse");toggleCollapseElts.forEach((e=>{e.addEventListener("click",(l=>{document.querySelector(e.dataset.target).classList.toggle("show")}))}));</script>
   </body>
 </html>
