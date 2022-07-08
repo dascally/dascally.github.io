@@ -21,7 +21,9 @@ title: Danny Scally
     ></script>
   </head>
   <body>
-    {%- include 'header.html' %}
-    <main>{{ content | safe -}}</main>
+    {%- include 'header.html' -%}
+    <main {%- if containerClass %} class="{{ containerClass }}" {%- endif %}>
+      {{- content | safe -}}
+    </main>
   </body>
 </html>
