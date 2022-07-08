@@ -13,6 +13,9 @@ window.addEventListener('load', (evt) => {
     );
 
     collapseElt.style['max-height'] = `${contentsHeight}px`;
+
+    if (collapseElt.classList.contains('collapseContainer--collapsed'))
+      collapseElt.hidden = true;
   });
 
   const toggleElts = document.querySelectorAll('.js-collapse-toggle');
@@ -29,10 +32,19 @@ window.addEventListener('load', (evt) => {
     toggleElt.setAttribute('aria-expanded', `${initExpanded}`);
 
     // Add click handlers to toggle collapse/expand
+    let timerID = null;
     toggleElt.addEventListener('click', (evt) => {
       const collapsed = collapseContainerElt.classList.toggle(
         'collapseContainer--collapsed'
       );
+      clearTimeout(timerID);
+      if (collapsed) {
+        timerID = setTimeout(() => {
+          collapseContainerElt.hidden = true;
+        }, 750);
+      } else {
+        collapseContainerElt.hidden = false;
+      }
       toggleElt.setAttribute('aria-expanded', `${!collapsed}`);
     });
   });
