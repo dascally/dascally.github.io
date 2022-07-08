@@ -14,7 +14,10 @@ window.addEventListener('load', (evt) => {
 
     collapseElt.style['max-height'] = `${contentsHeight}px`;
 
-    if (collapseElt.classList.contains('collapseContainer--collapsed'))
+    if (
+      collapseElt.classList.contains('collapseContainer--collapsed') &&
+      !collapseElt.classList.contains('collapseContainer--expandAtMedium')
+    )
       collapseElt.hidden = true;
   });
 
