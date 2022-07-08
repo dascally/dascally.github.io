@@ -8,9 +8,9 @@ window.addEventListener('load', (evt) => {
       (sum, elt) => sum + elt.offsetHeight,
       0
     );
-    contentsHeight += getComputedStyle(collapseElt.lastElementChild)[
-      'margin-block-end'
-    ];
+    contentsHeight += Number.parseInt(
+      getComputedStyle(collapseElt.lastElementChild)['margin-block-end']
+    );
 
     collapseElt.style['max-height'] = `${contentsHeight}px`;
   });
