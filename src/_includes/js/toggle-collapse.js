@@ -34,18 +34,29 @@ window.addEventListener('load', (evt) => {
     // Add click handlers to toggle collapse/expand
     let timerID = null;
     toggleElt.addEventListener('click', (evt) => {
-      const collapsed = collapseContainerElt.classList.toggle(
+      clearTimeout(timerID);
+
+      const isCollapsed = collapseContainerElt.classList.contains(
         'collapseContainer--collapsed'
       );
-      clearTimeout(timerID);
-      if (collapsed) {
+
+      if (isCollapsed) {
+        collapseContainerElt.hidden = false;
+
+        // Immediate timeout so that it's not hidden anymore and animation works
+        setTimeout(() => {
+          collapseContainerElt.classList.remove('collapseContainer--collapsed');
+        });
+      } else {
+        collapseContainerElt.classList.add('collapseContainer--collapsed');
+
+        // Wait 0.75s for animation
         timerID = setTimeout(() => {
           collapseContainerElt.hidden = true;
         }, 750);
-      } else {
-        collapseContainerElt.hidden = false;
       }
-      toggleElt.setAttribute('aria-expanded', `${!collapsed}`);
+
+      toggleElt.setAttribute('aria-expanded', `${isCollapsed}`);
     });
   });
 });
