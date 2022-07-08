@@ -56,6 +56,8 @@ body > main {
 }
 
 .globalNav {
+  margin-block-end: 1.5rem;
+
   gap: 1.25rem 1.75rem;
   align-items: center;
   justify-content: space-between;
@@ -95,6 +97,10 @@ body > main {
   .globalNav,
   .globalNav__list {
     flex-direction: row;
+  }
+
+  .globalNav {
+    margin-block-end: revert;
   }
 }
 
@@ -138,25 +144,24 @@ body > main {
 .globalNavHamburger:active {
   color: var(--primary-darker);
 }
-
-.collapse {
-  transition: max-height 0.5s ease, margin 0.2s ease;
-  overflow: hidden;
-  max-height: 0;
-  margin-block-end: 0;
-}
-.show {
-  max-height: 200vh;
-  margin-block-end: 1.5rem;
-}
-
 @media screen and (min-width: 750px) {
   .globalNavHamburger {
     display: none;
   }
+}
 
-  .collapse {
-    max-height: revert;
-    margin-block-end: revert;
+.collapseContainer {
+  /* JS calculates max-height per-element; this is a fallback value */
+  max-height: 600px;
+  overflow: hidden;
+  transition: max-height 0.75s ease;
+}
+.collapseContainer--collapsed {
+  /* expanded max-height is set per-elt by JS, so override with !important */
+  max-height: 0 !important;
+}
+@media screen and (min-width: 750px) {
+  .collapseContainer--expandAtMedium {
+    max-height: revert !important;
   }
 }
