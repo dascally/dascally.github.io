@@ -18,10 +18,18 @@ window.addEventListener('load', (evt) => {
   const toggleElts = document.querySelectorAll('.js-collapse-toggle');
 
   toggleElts.forEach((toggleElt) => {
-    toggleElt.addEventListener('click', (evt) => {
-      const targetID = toggleElt.getAttribute('aria-controls');
-      const collapseContainerElt = document.querySelector(`#${targetID}`);
+    const targetID = toggleElt.getAttribute('aria-controls');
+    const collapseContainerElt = document.querySelector(`#${targetID}`);
 
+    // Initialize aria-expanded
+    const initExpanded =
+      getComputedStyle(collapseContainerElt)['max-height'] === '0px'
+        ? false
+        : true;
+    toggleElt.setAttribute('aria-expanded', `${initExpanded}`);
+
+    // Add click handlers to toggle collapse/expand
+    toggleElt.addEventListener('click', (evt) => {
       const collapsed = collapseContainerElt.classList.toggle(
         'collapseContainer--collapsed'
       );
