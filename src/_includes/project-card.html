@@ -1,5 +1,4 @@
 <section class="projectCard">
-  <!-- <div class="projectCard__imgBox"> -->
   <picture class="projectCard__imgContainer">
     <source type="image/webp" srcset="{{ project.data.img.srcWebp }}" />
     <img
@@ -8,7 +7,6 @@
       alt="{{ project.data.img.alt }}"
     />
   </picture>
-  <!-- </div> -->
   <div class="projectCard__body">
     <h2>{{ project.data.title }}</h2>
     {{ project.templateContent | safe -}}
