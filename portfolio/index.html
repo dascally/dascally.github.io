@@ -18,36 +18,43 @@
     ></script>
   </head>
   <body><header>
-  <nav class="globalNav collapse" id="globalNav">
-    <ul class="globalNav__list">
-      <li>
-        <a href="/" class="globalNav__link"
-          >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
-        >
-      </li>
-      <li>
-        <a href="/about" class="globalNav__link">About Me</a>
-      </li>
-      <li>
-        <a href="/portfolio" class="globalNav__link">Portfolio</a>
-      </li>
-      <li>
-        <a href="/contact" class="globalNav__link">Contact</a>
-      </li>
-    </ul>
-    <ul class="globalNav__iconList">
-      <li>
-        <a href=""><span class="fa-brands fa-github fa-lg"></span></a>
-      </li>
-      <li>
-        <a href=""><span class="fa-brands fa-linkedin fa-lg"></span></a>
-      </li>
-    </ul>
-  </nav>
+  <div
+    id="globalNav"
+    class="collapseContainer collapseContainer--collapsed collapseContainer--expandAtMedium"
+  >
+    <nav class="globalNav">
+      <ul class="globalNav__list">
+        <li>
+          <a href="/" class="globalNav__link"
+            >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
+          >
+        </li>
+        <li>
+          <a href="/about" class="globalNav__link">About Me</a>
+        </li>
+        <li>
+          <a href="/portfolio" class="globalNav__link"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="/contact" class="globalNav__link">Contact</a>
+        </li>
+      </ul>
+      <ul class="globalNav__iconList">
+        <li>
+          <a href=""><span class="fa-brands fa-github fa-lg"></span></a>
+        </li>
+        <li>
+          <a href=""><span class="fa-brands fa-linkedin fa-lg"></span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <button
     type="button"
-    class="globalNavHamburger js-toggle-collapse"
-    data-target="#globalNav"
+    class="globalNavHamburger js-collapse-toggle"
+    aria-controls="globalNav"
   >
     <span class="fa-solid fa-bars fa-lg"></span>
   </button>
@@ -56,9 +63,8 @@
 <!-- prettier-ignore -->
 
 <!-- prettier-ignore -->
-<script>const toggleCollapseElts=document.querySelectorAll(".js-toggle-collapse");toggleCollapseElts.forEach((e=>{e.addEventListener("click",(l=>{document.querySelector(e.dataset.target).classList.toggle("show")}))}));</script>
-
-    <main>
+<script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&!e.classList.contains("collapseContainer--expandAtMedium")&&(e.hidden=!0)}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let o=null;e.addEventListener("click",(t=>{clearTimeout(o);const a=l.classList.contains("collapseContainer--collapsed");a?(l.hidden=!1,setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),o=setTimeout((()=>{l.hidden=!0}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
+<main>
 <h1>Portfolio</h1>
 
 <div class="portfolio">

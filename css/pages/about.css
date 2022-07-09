@@ -1,3 +1,11 @@
+.profilePicture > img {
+  width: 50%;
+  min-width: 288px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
 .skillsList {
   padding: 0;
   text-align: center;
