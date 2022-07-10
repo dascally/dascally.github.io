@@ -14,48 +14,43 @@ window.addEventListener('load', (evt) => {
 
     collapseElt.style['max-height'] = `${contentsHeight}px`;
 
-    if (
-      collapseElt.classList.contains('collapseContainer--collapsed') &&
-      !collapseElt.classList.contains('collapseContainer--expandAtMedium')
-    )
-      collapseElt.hidden = true;
+    if (collapseElt.classList.contains('collapseContainer--collapsed'))
+      collapseElt.classList.add('u-display-none');
   });
 
   const toggleElts = document.querySelectorAll('.js-collapse-toggle');
 
   toggleElts.forEach((toggleElt) => {
     const targetID = toggleElt.getAttribute('aria-controls');
-    const collapseContainerElt = document.querySelector(`#${targetID}`);
+    const collapseElt = document.querySelector(`#${targetID}`);
 
     // Initialize aria-expanded
-    const initExpanded =
-      getComputedStyle(collapseContainerElt)['max-height'] === '0px'
-        ? false
-        : true;
-    toggleElt.setAttribute('aria-expanded', `${initExpanded}`);
+    const isExpanded =
+      getComputedStyle(collapseElt)['max-height'] === '0px' ? false : true;
+    toggleElt.setAttribute('aria-expanded', `${isExpanded}`);
 
     // Add click handlers to toggle collapse/expand
     let timerID = null;
     toggleElt.addEventListener('click', (evt) => {
       clearTimeout(timerID);
 
-      const isCollapsed = collapseContainerElt.classList.contains(
+      const isCollapsed = collapseElt.classList.contains(
         'collapseContainer--collapsed'
       );
 
       if (isCollapsed) {
-        collapseContainerElt.hidden = false;
+        collapseElt.classList.remove('u-display-none');
 
         // Immediate timeout so that it's not hidden anymore and animation works
         setTimeout(() => {
-          collapseContainerElt.classList.remove('collapseContainer--collapsed');
+          collapseElt.classList.remove('collapseContainer--collapsed');
         });
       } else {
-        collapseContainerElt.classList.add('collapseContainer--collapsed');
+        collapseElt.classList.add('collapseContainer--collapsed');
 
         // Wait 0.75s for animation
         timerID = setTimeout(() => {
-          collapseContainerElt.hidden = true;
+          collapseElt.classList.add('u-display-none');
         }, 750);
       }
 

@@ -158,8 +158,10 @@ body > main {
   /* expanded max-height is set per-elt by JS, so override with !important */
   max-height: 0 !important;
 }
+
 @media screen and (min-width: 750px) {
   .collapseContainer--expandAtMedium {
     max-height: revert !important;
+    display: revert;
   }
 }
