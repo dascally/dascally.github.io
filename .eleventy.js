@@ -15,6 +15,26 @@ module.exports = (eleventyConfig) => {
     }
   });
 
+  eleventyConfig.addPairedShortcode(
+    'accordionSection',
+    (content, heading, id, headingLevel = 3) => {
+      return `<h${headingLevel} class="accordion__heading">
+                <button
+                  type="button"
+                  class="js-collapse-toggle"
+                  aria-controls="${id}"
+                  aria-expanded="false"
+                >
+                  <span>${heading}</span>
+                  <span class="accordion__icon fa-solid fa-chevron-down"></span>
+                </button>
+              </h${headingLevel}>
+              <div id="${id}" class="collapseContainer collapseContainer--collapsed">
+                <div class="accordion__panel">${content}</div>
+              </div>`;
+    }
+  );
+
   return {
     dir: {
       input: 'src',
