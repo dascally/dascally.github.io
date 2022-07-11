@@ -29,7 +29,14 @@ module.exports = (eleventyConfig) => {
                   <span class="accordion__icon fa-solid fa-chevron-down"></span>
                 </button>
               </h${headingLevel}>
-              <div id="${id}" class="collapseContainer collapseContainer--collapsed">
+              <div
+                id="${id}"
+                class="
+                  collapseContainer
+                  collapseContainer--collapsed
+                  collapseContainer--expandFallback
+                "
+              >
                 <div class="accordion__panel">${content}</div>
               </div>`;
     }

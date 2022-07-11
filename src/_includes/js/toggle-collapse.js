@@ -16,6 +16,10 @@ window.addEventListener('load', (evt) => {
 
     if (collapseElt.classList.contains('collapseContainer--collapsed'))
       collapseElt.classList.add('u-display-none');
+
+    /* The following is a fallback class that ensures the container is expanded
+    if JS fails to load or is disabled. Remove it here. */
+    collapseElt.classList.remove('collapseContainer--expandFallback');
   });
 
   const toggleElts = document.querySelectorAll('.js-collapse-toggle');
