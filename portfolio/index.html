@@ -18,9 +18,15 @@
     ></script>
   </head>
   <body><header>
+  <!-- prettier-ignore -->
   <div
     id="globalNav"
-    class="collapseContainer collapseContainer--collapsed collapseContainer--expandAtMedium"
+    class="
+      collapseContainer
+      collapseContainer--collapsed
+      collapseContainer--expandAtMedium
+      collapseContainer--expandFallback
+    "
   >
     <nav class="globalNav">
       <ul class="globalNav__list">
@@ -63,13 +69,13 @@
 <!-- prettier-ignore -->
 
 <!-- prettier-ignore -->
-<script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&!e.classList.contains("collapseContainer--expandAtMedium")&&(e.hidden=!0)}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let o=null;e.addEventListener("click",(t=>{clearTimeout(o);const a=l.classList.contains("collapseContainer--collapsed");a?(l.hidden=!1,setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),o=setTimeout((()=>{l.hidden=!0}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
+<script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&e.classList.add("u-display-none"),e.classList.remove("collapseContainer--expandFallback")}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let s=null;e.addEventListener("click",(t=>{clearTimeout(s);const a=l.classList.contains("collapseContainer--collapsed");a?(l.classList.remove("u-display-none"),setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),s=setTimeout((()=>{l.classList.add("u-display-none")}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
 <main>
 <h1>Portfolio</h1>
 
 <div class="portfolio">
+  <!-- prettier-ignore -->
   <section class="projectCard">
-  <!-- <div class="projectCard__imgBox"> -->
   <picture class="projectCard__imgContainer">
     <source type="image/webp" srcset="/img/coffee-and-comestibles-screenshot.webp" />
     <img
@@ -78,31 +84,32 @@
       alt="Screenshot of the Coffee &amp; Comestibles home page."
     />
   </picture>
-  <!-- </div> -->
   <div class="projectCard__body">
     <h2>Coffee &amp; Comestibles</h2>
-    <p>The fictional bakery café website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde obcaecati impedit voluptatem aut dolores veritatis error ea? Veniam distinctio esse itaque ut? Excepturi hic rem dolorem officia dignissimos. Fugiat.</p>
-    <p class="projectCard__linkContainer">
-      <a href="https://rad-meringue-5e53ba.netlify.app/">Visit Coffee &amp; Comestibles</a>
+    <p>This is a website for a fictional bakery-café that I made for the coding boot
+camp I attended. It's built with React, Express, and MongoDB.</p>
+<p>It supports a mock online ordering interface. After logging in, you can save
+payment methods and favorite orders, and accumulate rewards points.</p>
+<p class="projectCard__linkContainer">
+      <a href="https://rad-meringue-5e53ba.netlify.app/">Visit </a>
     </p>
   </div>
 </section>
 <section class="projectCard">
-  <!-- <div class="projectCard__imgBox"> -->
   <picture class="projectCard__imgContainer">
     <source type="image/webp" srcset="" />
     <img
       class="projectCard__img"
       src=""
-      alt=""
+      alt="Absent screenshot of a placeholder project."
     />
   </picture>
-  <!-- </div> -->
   <div class="projectCard__body">
     <h2>Another Project</h2>
-    <p>This one&#39;s just a placeholder to make sure things work.... Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde obcaecati impedit voluptatem aut dolores veritatis error ea? Veniam distinctio esse itaque ut? Excepturi hic rem dolorem officia dignissimos. Fugiat.</p>
-    <p class="projectCard__linkContainer">
-      <a href="">Visit Another Project</a>
+    <p>This one's just a placeholder to make sure things work....</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde obcaecati impedit voluptatem aut dolores veritatis error ea? Veniam distinctio esse itaque ut? Excepturi hic rem dolorem officia dignissimos. Fugiat.</p>
+<p class="projectCard__linkContainer">
+      <a href="">Visit </a>
     </p>
   </div>
 </section>

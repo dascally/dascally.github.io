@@ -154,12 +154,19 @@ body > main {
   overflow: hidden;
   transition: max-height 0.75s ease;
 }
-.collapseContainer--collapsed {
+.collapseContainer--collapsed:not(.collapseContainer--expandFallback) {
   /* expanded max-height is set per-elt by JS, so override with !important */
   max-height: 0 !important;
 }
+/* This class ensures that the container is visible if JS fails to load; if JS
+   does load, this class gets removed. */
+.collapseContainer--expandFallback {
+  max-height: revert;
+}
+
 @media screen and (min-width: 750px) {
-  .collapseContainer--expandAtMedium {
+  .collapseContainer--expandAtMedium:not(.collapseContainer--expandFallback) {
     max-height: revert !important;
+    display: revert;
   }
 }

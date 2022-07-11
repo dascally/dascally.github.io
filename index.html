@@ -18,9 +18,15 @@
     ></script>
   </head>
   <body><header>
+  <!-- prettier-ignore -->
   <div
     id="globalNav"
-    class="collapseContainer collapseContainer--collapsed collapseContainer--expandAtMedium"
+    class="
+      collapseContainer
+      collapseContainer--collapsed
+      collapseContainer--expandAtMedium
+      collapseContainer--expandFallback
+    "
   >
     <nav class="globalNav">
       <ul class="globalNav__list">
@@ -63,7 +69,7 @@
 <!-- prettier-ignore -->
 
 <!-- prettier-ignore -->
-<script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&!e.classList.contains("collapseContainer--expandAtMedium")&&(e.hidden=!0)}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let o=null;e.addEventListener("click",(t=>{clearTimeout(o);const a=l.classList.contains("collapseContainer--collapsed");a?(l.hidden=!1,setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),o=setTimeout((()=>{l.hidden=!0}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
+<script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&e.classList.add("u-display-none"),e.classList.remove("collapseContainer--expandFallback")}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let s=null;e.addEventListener("click",(t=>{clearTimeout(s);const a=l.classList.contains("collapseContainer--collapsed");a?(l.classList.remove("u-display-none"),setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),s=setTimeout((()=>{l.classList.add("u-display-none")}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
 <main class="welcomeContainer">
 <div class="welcomeMessage">
   <p class="welcomeMessage__text">

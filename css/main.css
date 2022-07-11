@@ -1,5 +1,6 @@
 /* Utilities */
 @import 'variables.css';
+@import 'utilities.css';
 
 /* Base */
 @import 'base.css';
