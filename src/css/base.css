@@ -21,6 +21,10 @@ ul,
 ol {
   margin-block-start: 0;
 }
+p + ul,
+p + ol {
+  margin-block-start: -0.5em;
+}
 
 h1,
 h2,
@@ -33,7 +37,6 @@ h6 {
   font-family: 'Montserrat Alternates', var(--font-family-sans-serif);
   font-weight: 300;
 }
-
 h1:first-child,
 h2:first-child,
 h3:first-child,
