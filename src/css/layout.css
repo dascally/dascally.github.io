@@ -148,6 +148,11 @@ body > main {
   }
 }
 
+/* Fallback for Home icon in global nav, if JS doesn't run */
+.fa-house-chimney::before {
+  content: 'Home';
+}
+
 .collapseContainer {
   /* JS calculates max-height per-element; this is a fallback value */
   max-height: 600px;
