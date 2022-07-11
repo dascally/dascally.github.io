@@ -9,4 +9,8 @@ img:
   alt: Screenshot of the Coffee & Comestibles home page.
 ---
 
-The **_fictional_ bakery café** website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde obcaecati impedit voluptatem aut dolores veritatis error ea? Veniam distinctio esse itaque ut? Excepturi hic rem dolorem officia dignissimos. Fugiat.
+This is a website for a fictional bakery-café that I made for the coding boot
+camp I attended. It's built with React, Express, and MongoDB.
+
+It supports a mock online ordering interface. After logging in, you can save
+payment methods and favorite orders, and accumulate rewards points.
