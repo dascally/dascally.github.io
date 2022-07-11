@@ -9,6 +9,7 @@
 :root {
   --dark: hsl(240, 17%, 17%);
   --dark-dark: hsl(240, 17%, 12%);
+  --dark-light: hsl(240, 17%, 25%);
   --light: hsl(30, 100%, 97%);
   --primary: hsl(270, 40%, 67%);
   --primary-dark: hsl(270, 40%, 64%);
