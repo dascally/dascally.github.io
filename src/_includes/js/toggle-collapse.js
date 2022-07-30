@@ -29,8 +29,7 @@ window.addEventListener('load', (evt) => {
     const collapseElt = document.querySelector(`#${targetID}`);
 
     // Initialize aria-expanded
-    const isExpanded =
-      getComputedStyle(collapseElt)['max-height'] === '0px' ? false : true;
+    const isExpanded = getComputedStyle(collapseElt)['max-height'] !== '0px';
     toggleElt.setAttribute('aria-expanded', `${isExpanded}`);
 
     // Add click handlers to toggle collapse/expand
