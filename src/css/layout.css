@@ -82,8 +82,9 @@ body > main {
 
 .globalNav__link {
   display: block;
+  margin: 3px;
   border-radius: 0.5em;
-  padding: 0.25em 0.5em;
+  padding: calc(0.25em - 3px) calc(0.5em - 3px);
   text-decoration: none;
 }
 .globalNav__link:hover {
