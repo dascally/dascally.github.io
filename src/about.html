@@ -1,0 +1,200 @@
+---
+layout: main.html
+title: 'Danny Scally: About Me'
+proficientSkills:
+  - 11ty
+  - Bootstrap
+  - CSS
+  - Express
+  - Git
+  - HTML5
+  - JavaScript (ES6+)
+  - Jest
+  - Node
+  - React
+  - React Router
+  - Redux
+  - RESTful APIs
+  - TypeScript
+familiarSkills:
+  - Cypress
+  - Java
+  - MongoDB
+  - Mongoose
+  - Python
+  - React Native
+  - Sass
+  - Testing Library
+  - Webpack
+education:
+  - title: Full Stack Web and Mobile Development Bootcamp
+    institution: Nucamp
+    date: Feb 2022
+  - title: BA in Biology
+    institution: Goucher College
+    date: May 2018
+---
+
+<picture class="profilePicture">
+  <source type="image/webp" srcset="/img/profile-picture.webp" />
+  <img src="/img/profile-picture.jpg" alt="Profile picture of Danny" />
+</picture>
+
+<h1>About Me</h1>
+
+<p
+  >I'm a lifelong student and I've been teaching myself about anything and
+  everything since I was a kid.</p
+>
+<p
+  >My first foray into web development came when I was 8 years old, and I've
+  been programming off and on ever since. However, it was only fairly recently
+  that I became serious about development and began studying computer science
+  (loosely following the
+  <a href="https://github.com/ossu/computer-science">OSSU curriculum</a>). In
+  fall 2021, I enrolled in <a href="https://www.nucamp.co/">Nucamp</a>'s
+  full-stack web development program. After graduating from Nucamp in early
+  2022, I continued my education via
+  <a href="https://fullstackopen.com">Full Stack Open</a>, as well as through
+  independent study and practice.</p
+>
+<p
+  >Never satisfied with simply memorizing and following procedures, I approach
+  software development with an eye to how things work, from the ground up. I
+  strive always to understand the fundamentals and think problems through from
+  first principles.</p
+>
+
+<details>
+  <summary>More about me</summary>
+  <p
+    >I am motivated most of all by the desire to build a more
+    compas&shy;sionate, more inspired, and more beautiful world.</p
+  >
+  <p
+    >Most of my interests tie back to that drive; these include permaculture,
+    anthropology, ecology, and economics, for example. I'm also interested in
+    the big questions about the nature of reality, and that has brought me to
+    meditation and philosophy.</p
+  >
+  <p
+    >One thing I absolutely love is that "aha" moment when you solve a tough
+    problem. Similarly, I enjoy putting together the pieces of a complex system
+    and seeing how they interact to create a whole. It's not surprising, then,
+    that I'm drawn to programming and to fields like computer science,
+    linguistics, and biology.</p
+  >
+  <p>I also like hiking.</p>
+</details>
+
+<h2>Skills</h2>
+
+<div class="skillsList">
+  <ul>
+    {% for skill in proficientSkills -%}
+    <li><span class="skillsList__skillText">{{ skill }}</span><wbr /></li>
+    {%- endfor %}
+  </ul>
+</div>
+
+<div class="skillsList">
+  Familiarity with:
+  <ul>
+    {% for skill in familiarSkills -%}
+    <li><span class="skillsList__skillText">{{ skill }}</span><wbr /></li>
+    {%- endfor %}
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<ul class="eduList">
+  {% for credential in education -%}
+  <li>
+    <div class="eduList__description">
+      <p>{{ credential.title }}</p>
+      <p>{{ credential.institution }}</p>
+    </div>
+    <div class="eduList__date">{{ credential.date }}</div>
+  </li>
+  {% endfor %}
+</ul>
+
+<h3>Selected Courses and Books</h3>
+
+<div class="accordion">
+  <!-- prettier-ignore -->
+  {% accordionSection
+    'Structure and Interpretation of Computer Programs',
+    'courses-sicp',
+    4
+  %}
+  <p
+    >I worked through the classic
+    <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html"
+      >SICP</a
+    >
+    in its entirety and it transformed my understanding of abstraction and
+    complexity, and gave me my first real grounding in functional
+    programming.</p
+  >
+  <p
+    >Some highlights amongst the exercises include building a Scheme
+    interpreter, a register machine simulator, a register machine implementation
+    of the Scheme interpreter, and a Scheme-to-register-machine compiler. I then
+    compiled the original Scheme interpreter, leaving me a Scheme interpreter
+    running on a register machine simulator running on a Scheme interpreter.</p
+  >
+  <p
+    >Another exercise I enjoyed was implementing <i>Church numerals</i> and an
+    addition operator that works with them. Church numerals are a number type
+    defined solely in terms of functions, with no number primitive involved.
+    This was when it really landed for me that you can build a full programming
+    language with only a single primitive data type (i.e., functions). I also
+    wrote a function that un-Churches a Church numeral back into an Arabic
+    numeral.</p
+  >
+  {% endaccordionSection %}
+  <!-- prettier-ignore -->
+  {% accordionSection 'Nand to Tetris', 'courses-n2t', 4 %}
+  <p
+    >I always love to see how everything fits together, so naturally I enjoyed
+    building a simulated computer from logic gates all the way up to a simple
+    Reversi game (i.e., from
+    <a href="https://www.nand2tetris.org">Nand to Tetris</a>, substituting
+    Reversi). This included building:</p
+  >
+  <ul>
+    <li
+      >A computer architecture, written in a hardware description language.</li
+    >
+    <li>An assembler (written in Java) for "Hack" assembly code.</li>
+    <li
+      >A compiler (also written in Java) for the Java-like programming language
+      "Jack", which translates Jack into Hack (via an intermediate stack-based
+      virtual machine code).</li
+    >
+    <li
+      >A Reversi game, written in Jack. This gave me some good memory management
+      practice.</li
+    >
+  </ul>
+  {% endaccordionSection %}
+  <!-- prettier-ignore -->
+  {% accordionSection 'Programming Languages', 'courses-pl', 4 %}
+  <p
+    ><a href="https://www.coursera.org/learn/programming-languages"
+      >Dan Grossman's Programming Languages MOOC</a
+    >
+    clarified a lot of functional programming concepts for me and helped me to
+    understand both functional and object-oriented programming better through
+    comparison.</p
+  >
+  <p
+    >One exercise that I found especially illuminating was to build the same
+    program twice, once in an object-oriented style and again in a functional
+    style. The course is taught with Standard ML, Racket, and Ruby, and the
+    concepts apply universally.</p
+  >
+  {% endaccordionSection %}
+</div>
