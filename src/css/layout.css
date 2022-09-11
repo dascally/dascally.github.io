@@ -79,6 +79,10 @@ body > main {
   margin: 0rem 0.5rem;
   width: 1.875rem;
 }
+.globalNav__iconList a {
+  border-radius: 0.25em;
+  padding: 0.125em 0.167em;
+}
 
 .globalNav__link {
   display: block;
