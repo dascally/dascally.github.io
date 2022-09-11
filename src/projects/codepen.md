@@ -1,6 +1,7 @@
 ---
 tags: project
 permalink: false
+date: 1900-01-01
 title: CodePen
 url: https://codepen.io/dascally
 img:

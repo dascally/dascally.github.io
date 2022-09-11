@@ -7,7 +7,7 @@ title: 'Danny Scally: Portfolio'
 
 <div class="portfolio">
   <!-- prettier-ignore -->
-  {% for project in collections.project -%}
+  {% for project in collections.project | reverse -%}
     {% include 'project-card.html' %}
   {%- endfor %}
 </div>
