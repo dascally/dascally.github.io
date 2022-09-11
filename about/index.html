@@ -43,12 +43,18 @@
       </ul>
       <ul class="globalNav__iconList">
         <li>
-          <a href="" aria-label="GitHub"
+          <a
+            href="https://github.com/dascally"
+            target="_blank"
+            aria-label="GitHub"
             ><span class="fa-brands fa-github fa-lg"></span
           ></a>
         </li>
         <li>
-          <a href="" aria-label="LinkedIn"
+          <a
+            href="https://www.linkedin.com/in/dascally/"
+            target="_blank"
+            aria-label="LinkedIn"
             ><span class="fa-brands fa-linkedin fa-lg"></span
           ></a>
         </li>
@@ -68,8 +74,228 @@
 
 <!-- prettier-ignore -->
 <script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&e.classList.add("u-display-none"),e.classList.remove("collapseContainer--expandFallback")}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let s=null;e.addEventListener("click",(t=>{clearTimeout(s);const a=l.classList.contains("collapseContainer--collapsed");a?(l.classList.remove("u-display-none"),setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),s=setTimeout((()=>{l.classList.add("u-display-none")}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
-<main><h1>About Me</h1>
-<p>Hello!</p>
+<main>
+<picture class="profilePicture">
+  <source type="image/webp" srcset="/img/profile-picture.webp" />
+  <img src="/img/profile-picture.jpg" alt="Profile picture of Danny" />
+</picture>
+
+<h1>About Me</h1>
+
+<p
+  >I'm a lifelong student and I've been teaching myself about anything and
+  everything since I was a kid.</p
+>
+<p
+  >My first foray into web development came when I was 8 years old, and I've
+  been programming off and on ever since. However, it was only fairly recently
+  that I became serious about development and began studying computer science
+  (loosely following the
+  <a href="https://github.com/ossu/computer-science">OSSU curriculum</a>). In
+  fall 2021, I enrolled in <a href="https://www.nucamp.co/">Nucamp</a>'s
+  full-stack web development program. After graduating from Nucamp in early
+  2022, I continued my education via
+  <a href="https://fullstackopen.com">Full Stack Open</a>, as well as through
+  independent study and practice.</p
+>
+<p
+  >Never satisfied with simply memorizing and following procedures, I approach
+  software development with an eye to how things work, from the ground up. I
+  strive always to understand the fundamentals and think problems through from
+  first principles.</p
+>
+
+<details>
+  <summary>More about me</summary>
+  <p
+    >I am motivated most of all by the desire to build a more
+    compas&shy;sionate, more inspired, and more beautiful world.</p
+  >
+  <p
+    >Most of my interests tie back to that drive; these include permaculture,
+    anthropology, ecology, and economics, for example. I'm also interested in
+    the big questions about the nature of reality, and that has brought me to
+    meditation and philosophy.</p
+  >
+  <p
+    >One thing I absolutely love is that "aha" moment when you solve a tough
+    problem. Similarly, I enjoy putting together the pieces of a complex system
+    and seeing how they interact to create a whole. It's not surprising, then,
+    that I'm drawn to programming and to fields like computer science,
+    linguistics, and biology.</p
+  >
+  <p>I also like hiking.</p>
+</details>
+
+<h2>Skills</h2>
+
+<div class="skillsList">
+  <ul>
+    <li><span class="skillsList__skillText">11ty</span><wbr /></li><li><span class="skillsList__skillText">Bootstrap</span><wbr /></li><li><span class="skillsList__skillText">CSS</span><wbr /></li><li><span class="skillsList__skillText">Express</span><wbr /></li><li><span class="skillsList__skillText">Git</span><wbr /></li><li><span class="skillsList__skillText">HTML5</span><wbr /></li><li><span class="skillsList__skillText">JavaScript (ES6+)</span><wbr /></li><li><span class="skillsList__skillText">Jest</span><wbr /></li><li><span class="skillsList__skillText">Node</span><wbr /></li><li><span class="skillsList__skillText">React</span><wbr /></li><li><span class="skillsList__skillText">React Router</span><wbr /></li><li><span class="skillsList__skillText">Redux</span><wbr /></li><li><span class="skillsList__skillText">RESTful APIs</span><wbr /></li><li><span class="skillsList__skillText">TypeScript</span><wbr /></li>
+  </ul>
+</div>
+
+<div class="skillsList">
+  Familiarity with:
+  <ul>
+    <li><span class="skillsList__skillText">Cypress</span><wbr /></li><li><span class="skillsList__skillText">Java</span><wbr /></li><li><span class="skillsList__skillText">MongoDB</span><wbr /></li><li><span class="skillsList__skillText">Mongoose</span><wbr /></li><li><span class="skillsList__skillText">Python</span><wbr /></li><li><span class="skillsList__skillText">React Native</span><wbr /></li><li><span class="skillsList__skillText">Sass</span><wbr /></li><li><span class="skillsList__skillText">Testing Library</span><wbr /></li><li><span class="skillsList__skillText">Webpack</span><wbr /></li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<ul class="eduList">
+  <li>
+    <div class="eduList__description">
+      <p>Full Stack Web and Mobile Development Bootcamp</p>
+      <p>Nucamp</p>
+    </div>
+    <div class="eduList__date">Feb 2022</div>
+  </li>
+  <li>
+    <div class="eduList__description">
+      <p>BA in Biology</p>
+      <p>Goucher College</p>
+    </div>
+    <div class="eduList__date">May 2018</div>
+  </li>
+  
+</ul>
+
+<h3>Selected Courses and Books</h3>
+
+<div class="accordion">
+  <!-- prettier-ignore -->
+  <h4 class="accordion__heading">
+                <button
+                  type="button"
+                  class="js-collapse-toggle"
+                  aria-controls="courses-sicp"
+                  aria-expanded="false"
+                >
+                  <span>Structure and Interpretation of Computer Programs</span>
+                  <span class="accordion__icon fa-solid fa-chevron-down"></span>
+                </button>
+              </h4>
+              <div
+                id="courses-sicp"
+                class="
+                  collapseContainer
+                  collapseContainer--collapsed
+                  collapseContainer--expandFallback
+                "
+              >
+                <div class="accordion__panel">
+  <p
+    >I worked through the classic
+    <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html"
+      >SICP</a
+    >
+    in its entirety and it transformed my understanding of abstraction and
+    complexity, and gave me my first real grounding in functional
+    programming.</p
+  >
+  <p
+    >Some highlights amongst the exercises include building a Scheme
+    interpreter, a register machine simulator, a register machine implementation
+    of the Scheme interpreter, and a Scheme-to-register-machine compiler. I then
+    compiled the original Scheme interpreter, leaving me a Scheme interpreter
+    running on a register machine simulator running on a Scheme interpreter.</p
+  >
+  <p
+    >Another exercise I enjoyed was implementing <i>Church numerals</i> and an
+    addition operator that works with them. Church numerals are a number type
+    defined solely in terms of functions, with no number primitive involved.
+    This was when it really landed for me that you can build a full programming
+    language with only a single primitive data type (i.e., functions). I also
+    wrote a function that un-Churches a Church numeral back into an Arabic
+    numeral.</p
+  >
+  </div>
+              </div>
+  <!-- prettier-ignore -->
+  <h4 class="accordion__heading">
+                <button
+                  type="button"
+                  class="js-collapse-toggle"
+                  aria-controls="courses-n2t"
+                  aria-expanded="false"
+                >
+                  <span>Nand to Tetris</span>
+                  <span class="accordion__icon fa-solid fa-chevron-down"></span>
+                </button>
+              </h4>
+              <div
+                id="courses-n2t"
+                class="
+                  collapseContainer
+                  collapseContainer--collapsed
+                  collapseContainer--expandFallback
+                "
+              >
+                <div class="accordion__panel">
+  <p
+    >I always love to see how everything fits together, so naturally I enjoyed
+    building a simulated computer from logic gates all the way up to a simple
+    Reversi game (i.e., from
+    <a href="https://www.nand2tetris.org">Nand to Tetris</a>, substituting
+    Reversi). This included building:</p
+  >
+  <ul>
+    <li
+      >A computer architecture, written in a hardware description language.</li
+    >
+    <li>An assembler (written in Java) for "Hack" assembly code.</li>
+    <li
+      >A compiler (also written in Java) for the Java-like programming language
+      "Jack", which translates Jack into Hack (via an intermediate stack-based
+      virtual machine code).</li
+    >
+    <li
+      >A Reversi game, written in Jack. This gave me some good memory management
+      practice.</li
+    >
+  </ul>
+  </div>
+              </div>
+  <!-- prettier-ignore -->
+  <h4 class="accordion__heading">
+                <button
+                  type="button"
+                  class="js-collapse-toggle"
+                  aria-controls="courses-pl"
+                  aria-expanded="false"
+                >
+                  <span>Programming Languages</span>
+                  <span class="accordion__icon fa-solid fa-chevron-down"></span>
+                </button>
+              </h4>
+              <div
+                id="courses-pl"
+                class="
+                  collapseContainer
+                  collapseContainer--collapsed
+                  collapseContainer--expandFallback
+                "
+              >
+                <div class="accordion__panel">
+  <p
+    ><a href="https://www.coursera.org/learn/programming-languages"
+      >Dan Grossman's Programming Languages MOOC</a
+    >
+    clarified a lot of functional programming concepts for me and helped me to
+    understand both functional and object-oriented programming better through
+    comparison.</p
+  >
+  <p
+    >One exercise that I found especially illuminating was to build the same
+    program twice, once in an object-oriented style and again in a functional
+    style. The course is taught with Standard ML, Racket, and Ruby, and the
+    concepts apply universally.</p
+  >
+  </div>
+              </div>
+</div>
 </main>
   </body>
 </html>
