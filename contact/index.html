@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danny Scally: Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/33b33f7630.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body><header>
+  <div
+    id="globalNav"
+    class="collapseContainer collapseContainer--collapsed collapseContainer--expandAtMedium collapseContainer--expandFallback"
+  >
+    <nav class="globalNav">
+      <ul class="globalNav__list">
+        <li>
+          <a href="/" class="globalNav__link" aria-label="Home"
+            >&nbsp;<span class="fa-solid fa-house-chimney"></span>&nbsp;</a
+          >
+        </li>
+        <li>
+          <a href="/about" class="globalNav__link">About Me</a>
+        </li>
+        <li>
+          <a href="/portfolio" class="globalNav__link"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="/contact" class="globalNav__link">Contact</a>
+        </li>
+      </ul>
+      <ul class="globalNav__iconList">
+        <li>
+          <a
+            href="https://github.com/dascally"
+            target="_blank"
+            aria-label="GitHub"
+            ><span class="fa-brands fa-github fa-lg"></span
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/dascally/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><span class="fa-brands fa-linkedin fa-lg"></span
+          ></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <button
+    type="button"
+    class="globalNavHamburger js-collapse-toggle"
+    aria-controls="globalNav"
+  >
+    <span class="fa-solid fa-bars fa-lg"></span>
+  </button>
+</header>
+
+<!-- prettier-ignore -->
+
+<!-- prettier-ignore -->
+<script>window.addEventListener("load",(e=>{document.querySelectorAll(".collapseContainer").forEach((e=>{let t=Array.prototype.reduce.call(e.children,((e,t)=>e+t.offsetHeight),0);t+=Number.parseInt(getComputedStyle(e.lastElementChild)["margin-block-end"]),e.style["max-height"]=`${t}px`,e.classList.contains("collapseContainer--collapsed")&&e.classList.add("u-display-none"),e.classList.remove("collapseContainer--expandFallback")}));document.querySelectorAll(".js-collapse-toggle").forEach((e=>{const t=e.getAttribute("aria-controls"),l=document.querySelector(`#${t}`),a="0px"!==getComputedStyle(l)["max-height"];e.setAttribute("aria-expanded",`${a}`);let s=null;e.addEventListener("click",(t=>{clearTimeout(s);const a=l.classList.contains("collapseContainer--collapsed");a?(l.classList.remove("u-display-none"),setTimeout((()=>{l.classList.remove("collapseContainer--collapsed")}))):(l.classList.add("collapseContainer--collapsed"),s=setTimeout((()=>{l.classList.add("u-display-none")}),750)),e.setAttribute("aria-expanded",`${a}`)}))}))}));</script>
+<main>
+<h1>Contact</h1>
+
+<p>Want to get in touch? You can:</p>
+
+<ul>
+  <li
+    >Email me at
+    <a href="mailto:dascally+portfolio@outlook.com"
+      >dascally+portfolio@outlook.com</a
+    >.</li
+  >
+  <li
+    >Contact me
+    <a href="https://www.linkedin.com/in/dascally/">on LinkedIn</a>.</li
+  >
+</ul>
+</main>
+  </body>
+</html>
